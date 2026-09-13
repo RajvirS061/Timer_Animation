@@ -165,16 +165,15 @@
                     cntElem.innerText = counter;
                 } else if (counter === 0) {
                     // One more clock pulse causes underflow/update event
-                    counter = -1;
-                    cntElem.innerText = '9';
-                } else {
                     document.getElementById('flag-value').innerText = '1';
                     document.getElementById('flag-block').classList.add('flag-active');
-                    
+                    counter = -1;
                     // Play audio beep
                     playBeep();
-
+                    cntElem.innerText = '9';
+                    
                     clearInterval(intervalId);
+
                 }
             }, 1000); // 1 Hz clock rate
         }
