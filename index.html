@@ -165,8 +165,8 @@
                     cntElem.innerText = counter;
                 } else if (counter === 0) {
                     // One more clock pulse causes underflow/update event
-                    counter = 9;
-                    cntElem.innerText = counter;
+                    counter--;
+                    cntElem.innerText = '9';
                 } else {
                     document.getElementById('flag-value').innerText = '1';
                     document.getElementById('flag-block').classList.add('flag-active');
